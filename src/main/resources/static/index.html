@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery.js"></script>
+<script>
+    $(function () {
+        $("#delete").click(del);
+    });
+    function del() {
+        var startYmd = $('#startYmd').val();
+        var endYmd = $('#endYmd').val();
+        var busId = $('#busId').val();
+        var isNewValue = $("input[name='isNewValue']:checked").val();
+        $.ajax({
+            url: 'http://127.0.0.1:8080/remove',
+            data:{
+                'startYmd': startYmd,
+                'endYmd': endYmd,
+                'busId': busId,
+                'isNewValue': isNewValue
+            }
+        });
+    }
+</script>
+<body>
+    <label>
+        开始日期:<input id="startYmd" name="startYmd" value="20200115">
+    </label>
+    <label>
+        结束日期:<input id="endYmd" name="endYmd" value="20200215">
+    </label>
+    <label>
+        母线ID:<input id="busId" name="busId" value="">
+    </label>
+    <label for="type1"><input type="radio" id="type1" name="isNewValue" value="1">虚拟预测</label>
+    <label for="type2"><input type="radio" id="type2" name="isNewValue" value="2" checked="checked">检修还原</label>
+    <input id="delete" type="button" value="删除">
+</body>
+</html>
