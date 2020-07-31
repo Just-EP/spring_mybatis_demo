@@ -60,11 +60,12 @@
             <artifactId>orai18n</artifactId>
             <version>12.1.0.2.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.tsingsoft.overhaul</groupId>
-            <artifactId>repair_schedule_collect_dongguan</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.tsingsoft.overhaul</groupId>-->
+<!--            <artifactId>repair_schedule_collect_dongguan</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>

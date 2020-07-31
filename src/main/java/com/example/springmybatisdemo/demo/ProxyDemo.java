@@ -15,7 +15,7 @@ import java.io.IOException;
 public class ProxyDemo {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             test();
         }
     }
@@ -37,6 +37,8 @@ public class ProxyDemo {
             int code = execute.getStatusLine().getStatusCode();
             System.out.println(proxyAddress+"/"+code);
             HttpEntity entity = execute.getEntity();
+            String s = EntityUtils.toString(entity);
+            System.out.println(s);
             EntityUtils.consume(entity);
             proxyClient.close();
         } catch (IOException e) {

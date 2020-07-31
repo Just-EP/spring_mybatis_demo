@@ -12,8 +12,6 @@ spring:
       maxLifetime: 1800000
   resources:
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
-mybatis:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-logging:
-  level: info
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

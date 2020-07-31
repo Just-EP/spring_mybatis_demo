@@ -1,7 +1,6 @@
 package com.example.springmybatisdemo.service;
 
 import com.example.springmybatisdemo.domain.SimpleOverhaulBean;
-import com.tsingsoft.main.TestBusOverhaul;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,11 +45,12 @@ class SimpleOverhaulServiceImplTest {
             bufferedWriter = new BufferedWriter(new FileWriter(file));
             for (SimpleOverhaulBean simpleOverhaulBean : collect) {
                 String overhaulNumber = simpleOverhaulBean.getOverhaulNumber();
-                TestBusOverhaul.analyseByOverhaulNumber(overhaulNumber);
-                String string = simpleOverhaulBean.toString();
-                bufferedWriter.write(string);
-                bufferedWriter.newLine();
+//                TestBusOverhaul.analyseByOverhaulNumber(overhaulNumber);
+//                String string = simpleOverhaulBean.toString();
+//                bufferedWriter.write(string);
+//                bufferedWriter.newLine();
             }
+            bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
